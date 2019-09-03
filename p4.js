@@ -50,7 +50,7 @@ function solution(total_sp, skills) {
   const kingNode = findKingNode(nodeList)
   bfs(kingNode)
   nodeList.sort((a, b) => b.sp - a.sp)
-  return nodeList.map(v => v.sp * max);
+  return nodeList.map(v => v.sp * (total_sp/max));
 }
 
 console.log(solution(121, [[1, 2], [1, 3], [3, 6], [3, 4], [3, 5]]))
